@@ -1,0 +1,1 @@
+docker run --rm --name redis-cli -it goodsmileduck/redis-cli sh -c "redis-cli -h 172.22.2.42 -p 6379 -a jykj@123456 -n 1 --scan --pattern 'REDIS_MINE_RECORD_IN*' | xargs -n 1000000 -r redis-cli -h 172.22.2.42 -p 6379 -a jykj@123456 -n 1 del"
